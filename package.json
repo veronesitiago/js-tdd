@@ -1,0 +1,23 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "biblioteca do curso de JS com TDD na prática",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veronesitiago/js-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd"
+  ],
+  "author": "Tiago Veronesi <tiagoveronesi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/veronesitiago/js-tdd/issues"
+  },
+  "homepage": "https://github.com/veronesitiago/js-tdd#readme"
+}

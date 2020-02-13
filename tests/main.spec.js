@@ -1,52 +1,27 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
-
-let expect = require('chai').expect;
+import { expect } from 'chai';
+import FizzBuzz from '../src/main';
 
 describe('Main', () => {
-  let arr;
-  // Roda uma vez antes do bloco
-  before(() => {
-    // console.log('before');
+  it('should return `Fizz` when multiple of 3', () => {
+    expect(FizzBuzz(3)).to.be.equal('Fizz');
   });
 
-  // Roda uma vez depois do bloco
-  after(() => {
-    // console.log('after');
+  it('should return `Buzz` when multiple of 5', () => {
+    expect(FizzBuzz(5)).to.be.equal('Buzz');
   });
 
-  // Roda todas as vezes, antes de cada bloco
-  beforeEach(() => {
-    // console.log('beforeEach');
-    arr = [1, 2, 3];
+  it('should return `FizzBuzz` when multiple of 3 and 5', () => {
+    expect(FizzBuzz(15)).to.be.equal('FizzBuzz');
   });
 
-  // Roda todas as vezes, depois de cada bloco
-  afterEach(() => {
-    // console.log('afterEach');
+  it('should return number when non-multiple', () => {
+    expect(FizzBuzz(7)).to.be.equal(7);
   });
 
-  it('should be an array', () => {
-    expect(arr).to.be.a('array');
-  });
-
-  it('should have a size of 4 when push another value to the array', () => {
-    arr.push(4);
-    expect(arr).to.have.lengthOf(4);
-  });
-
-  it('should remove the value 3 when use pop in the array', () => {
-    arr.pop();
-    expect(arr).to.not.include(3);
-  });
-
-  it('should return true when pop 3 from the array', () => {
-    expect(arr.pop() === 3).to.be.true;
-  });
-
-  it('should have a size of 2 when pop a value from the array', () => {
-    arr.pop();
-    expect(arr).to.have.lengthOf(2);
+  it('should return 0 when 0', () => {
+    expect(FizzBuzz(0)).to.be.equal(0);
   });
 });
